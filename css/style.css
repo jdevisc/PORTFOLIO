@@ -8,7 +8,7 @@
 }
 
 html, body {
-  font-family: 'Lato', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
@@ -66,7 +66,7 @@ header h1 {
 /* Hero / Lead Section               */
 /* ---------------------------------- */
 #lead {
-  background: #333;
+  background: #0a051d;
   color: white;
   text-align: center;
   padding: 6rem 1rem;
@@ -107,6 +107,10 @@ header h1 {
 .btn-rounded-white:hover {
   background: white;
   color: #333;
+}
+
+textarea{
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .btn-contact {
@@ -187,6 +191,7 @@ section {
   max-width: 800px;
   margin: 0 auto;
   padding-left: 1rem;
+  text-align: center;
 }
 
 .skill-list li {
@@ -244,7 +249,7 @@ form textarea:focus {
 /* Footer                            */
 /* ---------------------------------- */
 footer {
-  background: #222;
+  background: #0a051d;
   color: white;
   padding: 2rem 1rem;
   text-align: center;

@@ -89,6 +89,7 @@ body {
   margin: 40px auto;
   padding: 2rem;
   background: white;
+  border: 2px solid lightgray;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }

@@ -1,37 +1,50 @@
-// Simple form validation and feedback for contact form
-
 document.addEventListener("DOMContentLoaded", () => {
-const form = document.getElementById("contact-form");
-const message = document.getElementById("form-message");
+  const form = document.getElementById("contact-form");
+  const messageBox = document.getElementById("form-message");
 
-if (form) {
-form.addEventListener("submit", (e) => {
-e.preventDefault();
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-// Basic validation
-const name = form.name.value.trim();
-const email = form.email.value.trim();
-const msg = form.message.value.trim();
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const msg = form.message.value.trim();
 
-if (!name || !email || !msg) {
-message.style.color = "red";
-message.textContent = "Please fill in all fields.";
-return;
-}
+    if (!name || !email || !msg) {
+      messageBox.style.color = "red";
+      messageBox.textContent = "Por favor completa todos los campos.";
+      hideMessageAfterDelay();
+      return;
+    }
 
-// Simple email regex
-const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if (!emailPattern.test(email)) {
-message.style.color = "red";
-message.textContent = "Please enter a valid email.";
-return;
-}
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      messageBox.style.color = "red";
+      messageBox.textContent = "Por favor ingresa un correo válido.";
+      hideMessageAfterDelay();
+      return;
+    }
 
-// Simulate sending message
-message.style.color = "green";
-message.textContent = "Thank you for your message! I will get back to you soon.";
+    try {
+      const formData = new FormData(form);
+      await fetch("https://formsubmit.co/ajax/jdevisc@gmail.com", {
+        method: "POST",
+        body: formData,
+      });
 
-form.reset();
-});
-}
+      messageBox.style.color = "green";
+      messageBox.textContent = "¡Mensaje enviado con éxito!";
+      form.reset();
+      hideMessageAfterDelay();
+    } catch (error) {
+      messageBox.style.color = "red";
+      messageBox.textContent = "Hubo un error al enviar el mensaje.";
+      hideMessageAfterDelay();
+    }
+  });
+
+  function hideMessageAfterDelay() {
+    setTimeout(() => {
+      messageBox.textContent = "";
+    }, 4000); // Oculta el mensaje después de 4 segundos
+  }
 });

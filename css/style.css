@@ -1,6 +1,4 @@
-/* ---------------------------------- */
-/* Reset & Base Styles               */
-/* ---------------------------------- */
+/*Reset & Base Styles*/
 * {
   margin: 0;
   padding: 0;
@@ -27,9 +25,7 @@ ul {
   list-style: none;
 }
 
-/* ---------------------------------- */
-/* Header                            */
-/* ---------------------------------- */
+/*Header*/
 header {
   background-color: #fff;
   text-align: center;
@@ -50,7 +46,7 @@ header h1 {
   color: #666;
 }
 
-/* Navigation */
+/*Navigation*/
 #menu {
   display: flex;
   justify-content: center;
@@ -62,9 +58,7 @@ header h1 {
   color: #333;
 }
 
-/* ---------------------------------- */
-/* Hero / Lead Section               */
-/* ---------------------------------- */
+/*Hero / Lead Section*/
 #lead {
   background: #0a051d;
   color: white;
@@ -91,9 +85,7 @@ header h1 {
   font-size: 1.5rem;
 }
 
-/* ---------------------------------- */
-/* Buttons                           */
-/* ---------------------------------- */
+/*Buttons*/
 .btn-rounded-white {
   display: inline-block;
   background: transparent;
@@ -146,15 +138,13 @@ textarea{
   background-color: #0056b3;
 }
 
-/* ---------------------------------- */
-/* Sections & Containers             */
-/* ---------------------------------- */
+/* Sections & Containers */
 section {
   padding: 4rem 1rem;
 }
 
 .background-alt {
-  background: #f1f1f1;
+  background: rgb(241, 241, 241);
 }
 
 .heading {
@@ -172,7 +162,7 @@ section {
   display: block;
   width: 50px;
   height: 2px;
-  background-color: #0a051d; /* color turquesa */
+  background-color: #0a051d; 
   margin: 10px auto 0 auto;
   margin-top: 10px;
 }
@@ -189,9 +179,7 @@ section {
   gap: 2rem;
 }
 
-/* ---------------------------------- */
-/* Projects                          */
-/* ---------------------------------- */
+/* Projects */
 .project {
   background: white;
   padding: 2rem;
@@ -199,9 +187,8 @@ section {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* ---------------------------------- */
-/* Skills                            */
-/* ---------------------------------- */
+/* Skills */
+
 #skills ul {
   max-width: 800px;
   margin: 0 auto;
@@ -210,19 +197,19 @@ section {
 }
 
 .skill-list {
-  max-width: 600px;           /* ancho máximo */
-  margin: 20px auto 50px;     /* centrado y espacio */
-  padding: 20px 30px;         /* espacio interno */
-  border: 2px solid lightgrey;  /* línea elegante */
-  border-radius: 0px;        /* esquinas redondeadas */
-  background-color: #f9fdfa;  /* fondo muy suave y claro */
-  box-shadow: 0 4px 15px rgba(51, 204, 204, 0.15); /* sombra sutil */
-  list-style-type: none;      /* removemos los bullets por defecto */
+  max-width: 600px;           
+  margin: 20px auto 50px;     
+  padding: 20px 30px;        
+  border: 2px solid lightgrey;  
+  border-radius: 0px;        
+  background-color: #f9fdfa;  
+  box-shadow: 0 4px 15px rgba(51, 204, 204, 0.15); 
+  list-style-type: none;      
 }
 
 .skill-list li {
   padding: 8px 0;
-  border-bottom: 1px solid #d6f0f0; /* línea fina entre ítems */
+  border-bottom: 1px solid #d6f0f0; 
   font-weight: 300;
   color: #333;
   font-family: 'Lato', sans-serif;
@@ -237,9 +224,7 @@ section {
   font-size: 1.1rem;
 }
 
-/* ---------------------------------- */
-/* Contact Form                      */
-/* ---------------------------------- */
+/* Contact Form */
 #contact {
   text-align: center;
   padding: 60px 20px;
@@ -258,7 +243,7 @@ section {
   display: block;
   width: 50px;
   height: 2px;
-  background-color: #0a051d; /* color turquesa */
+  background-color: #0a051d; 
   margin: 10px auto 0;
 }
 
@@ -289,7 +274,7 @@ form textarea {
   border-radius: 8px;
   font-size: 1rem;
   background-color: white;
-  color: #f1f1f1;
+  color: #0a051d;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
@@ -317,9 +302,13 @@ form textarea:focus {
   background-color: #1a9e9e;
 }
 
-/* ---------------------------------- */
-/* Footer                            */
-/* ---------------------------------- */
+#form-message {
+  font-size: 1rem;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+/* Footer */
 footer {
   background: #0a051d;
   color: white;
@@ -344,16 +333,16 @@ footer ul {
   gap: 1rem;
 }
 
-/* ---------------------------------- */
-/* Scroll / To Top                   */
-/* ---------------------------------- */
+.social-icon {
+  margin-top: 10px;
+}
+
+/* Scroll / To Top */
 #to-top {
   cursor: pointer;
 }
 
-/* ---------------------------------- */
-/* Responsive Design                 */
-/* ---------------------------------- */
+/* Responsive Design */
 @media (min-width: 768px) {
   .row {
     flex-direction: row;
